@@ -2,20 +2,23 @@ import java.util.Random;
 
 public class Card {
 	
-	// Class properties will go here for value and suit
+	// Creating variables
 	int value = 0;
 	int suit = 0;
 	
+	// Creating constructor and setting value and suit
 	public Card() {
 		Random num = new Random();
-		value = num.nextInt(13) + 1;
-		suit = num.nextInt(4) + 1;
+		this.value = num.nextInt(13) + 1;
+		this.suit = num.nextInt(4) + 1;
 	}
 	
+	// Method for returning a string 
 	public String toString() {
 		return value() + " of " + suit();
 	}
 	
+	// Method for determining suit
 	public String suit() {
 		if(suit == 1) {
 			return "Hearts";
@@ -29,6 +32,7 @@ public class Card {
 	
 	}
 
+	// Method for determining value
 	public String value() {
 		if(value == 1) {
 			return "Ace";
